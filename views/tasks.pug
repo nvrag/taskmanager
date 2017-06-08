@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    h1 Tasks page
+    ul.list-group
+        each task, i in tasks
+            li.list-group-item
+                a(href='/tasks/'+task._id)= task.title
+            br

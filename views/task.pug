@@ -1,0 +1,17 @@
+extends layout
+
+block content    
+    .panel.panel-primary
+        .panel-heading
+            h3.panel-title #{task.title}
+        h5.panel-body Author : #{author}
+        h3.panel-body.well.well-lg  #{task.body}            
+            h5.panel-body For : #{task.for}
+    hr
+    if user
+        if user.id ==task.author
+            a.btn.btn-default(href='/tasks/edit/'+task.id) Edit
+            a.btn.btn-danger.delete-task(href='#', data-id=task._id) Delete
+
+
+            

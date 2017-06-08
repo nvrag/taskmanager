@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    h1 Edit task
+    form(method='POST', action='/tasks/edit/'+task._id)
+        .form-group
+            label Title:
+            input.form-control(name='title', type= 'text', value=task.title)
+        .form-group
+            label Body:
+            textarea.form-control(name='body')= task.body
+        .form-group
+            label For:
+            input.form-control(name='for', type= 'text', value=task.for)
+        input.btn.btn-primary(type= 'submit', value= 'Submit')
