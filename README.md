@@ -1,6 +1,6 @@
 # Simple task manager
 
-### For instalation go to the project folder and use
+### For installation go to the project folder and use
 ```
 git clone
 ```
@@ -8,3 +8,4 @@ git clone
 ```
 npm install
 ```
+### also you need install mongoDB
